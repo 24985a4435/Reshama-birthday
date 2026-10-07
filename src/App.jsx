@@ -6,7 +6,7 @@ import image2 from "./assets/image1.jpg";
 import reshama1 from "./assets/reshama1.jpeg";
 import reshama2 from "./assets/reshama2.jpeg";
 import reshama3 from "./assets/reshama3.jpeg";
-import messageBackgroundVideo from "./assets/Video.mp4";
+import messageBackgroundVideo from "./assets/video.mp4";
 
 const galleryImages = [
   {
