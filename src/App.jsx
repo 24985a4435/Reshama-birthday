@@ -242,13 +242,12 @@ function App() {
               <path d="M25 45h14" />
             </svg>
           </div>
-          <p className="desktop-only-eyebrow">MADE FOR A BIGGER SCREEN</p>
+          <p className="desktop-only-eyebrow">MADE FOR A BIGGER SCREEN RESHAMA</p>
           <h1>Please open on a laptop or PC</h1>
           <p className="desktop-only-description">
             This birthday experience is designed to be viewed on a laptop or
             desktop computer. Please open this website on one to continue.
           </p>
-          <span className="desktop-only-heart" aria-hidden="true">♥</span>
         </div>
       </main>
     );
