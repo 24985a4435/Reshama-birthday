@@ -13,7 +13,7 @@ const galleryImages = [
     src: image1,
     size: "large",
     caption: "Some moments just feel special",
-    message: "Niku aa special moment no kadho naku thelishu but nenu matram eppatiki marchiponu. Nenu aa roju full ga enjoy chesanu. Naa life lo aa roju oka special memory ga undi. aa event id ippatiki na dhaggare vunnayi reshama",
+    message: "Niku adhi special moment no kadho naku thelidhu but nenu matram eppatiki marchiponu. Nenu aa roju full ga enjoy chesanu. Naa life lo aa roju oka special memory ga undi. aa event id ippatiki na dhaggare vunnayi reshama",
   },
   {
     src: image2,
