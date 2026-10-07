@@ -146,6 +146,21 @@ function MessagesBackgroundVideo() {
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
+  const [isDesktop, setIsDesktop] = useState(
+    () => window.matchMedia("(min-width: 801px)").matches,
+  );
+
+  useEffect(() => {
+    const desktopQuery = window.matchMedia("(min-width: 801px)");
+    const updateDeviceLayout = () => setIsDesktop(desktopQuery.matches);
+
+    desktopQuery.addEventListener("change", updateDeviceLayout);
+    window.addEventListener("resize", updateDeviceLayout);
+    return () => {
+      desktopQuery.removeEventListener("change", updateDeviceLayout);
+      window.removeEventListener("resize", updateDeviceLayout);
+    };
+  }, []);
 
   useEffect(() => {
     const pageHeightElements =
@@ -215,6 +230,29 @@ function App() {
 
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  if (!isDesktop) {
+    return (
+      <main className="desktop-only-page">
+        <div className="desktop-only-card">
+          <div className="desktop-only-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 52" fill="none">
+              <rect x="9" y="5" width="46" height="33" rx="3" />
+              <path d="M4 45h56l-5-7H9l-5 7Z" />
+              <path d="M25 45h14" />
+            </svg>
+          </div>
+          <p className="desktop-only-eyebrow">MADE FOR A BIGGER SCREEN</p>
+          <h1>Please open on a laptop or PC</h1>
+          <p className="desktop-only-description">
+            This birthday experience is designed to be viewed on a laptop or
+            desktop computer. Please open this website on one to continue.
+          </p>
+          <span className="desktop-only-heart" aria-hidden="true">♥</span>
+        </div>
+      </main>
+    );
+  }
 
   if (currentPage === "gallery") {
     return (
