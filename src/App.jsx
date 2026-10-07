@@ -6,13 +6,14 @@ import image2 from "./assets/image1.jpg";
 import reshama1 from "./assets/reshama1.jpeg";
 import reshama2 from "./assets/reshama2.jpeg";
 import reshama3 from "./assets/reshama3.jpeg";
+import messageBackgroundVideo from "./assets/Video.mp4";
 
 const galleryImages = [
   {
     src: image1,
     size: "large",
     caption: "Some moments just feel special",
-    message: "Niku aa special moment no kadho naku thelishu but nenu matram eppatiki marchiponu. Nenu aa roju full ga enjoy chesanu. Naa life lo aa roju oka special memory ga undi.",
+    message: "Niku aa special moment no kadho naku thelishu but nenu matram eppatiki marchiponu. Nenu aa roju full ga enjoy chesanu. Naa life lo aa roju oka special memory ga undi. aa event id ippatiki na dhaggare vunnayi reshama",
   },
   {
     src: image2,
@@ -128,6 +129,21 @@ function GalleryMotion() {
   );
 }
 
+function MessagesBackgroundVideo() {
+  return (
+    <video
+      className="messages-scroll-video"
+      src={messageBackgroundVideo}
+      muted
+      playsInline
+      autoPlay
+      loop
+      preload="metadata"
+      aria-hidden="true"
+    />
+  );
+}
+
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
 
@@ -174,7 +190,7 @@ function App() {
     };
   }, [currentPage]);
 
-  const navItems = ["Home", "Gallery", "Messages", "Surprise"];
+  const navItems = ["Home", "Gallery", "Messages", "Wish"];
 
   const handleNavClick = (item) => {
     if (item === "Gallery") {
@@ -281,6 +297,16 @@ function App() {
   if (currentPage === "messages") {
     return (
       <div className="messages-page page">
+        <div className="messages-page-atmosphere" aria-hidden="true">
+          <MessagesBackgroundVideo />
+          <span className="messages-light messages-light-one" />
+          <span className="messages-light messages-light-two" />
+          <span className="messages-light messages-light-three" />
+          <span className="messages-star messages-star-one">✦</span>
+          <span className="messages-star messages-star-two">✧</span>
+          <span className="messages-star messages-star-three">✦</span>
+          <span className="messages-star messages-star-four">✧</span>
+        </div>
         <header className="gallery-header">
           <div className="logo">
             <span className="logo-icon">🎂</span>
@@ -321,15 +347,29 @@ function App() {
 
             <div className="conversation-line line-2 reveal">
               <p>
-                Na life lo nijam ga nuvvu chala important person. naku chala nerpinchavu. evaritho ela vundalo cheppavu chala cheppavu ila. nenu chala nerchukunnanu. and nenu nitho close ayyinandha ekkuvaga evaritho avvaledhu ippatiki kuda, You are my forever best friend. manam matladukunna matladukokapoyina naku nuvvu eppudu best friend ga vuntavu. nuvvu natho vunte niku ela vuntadho naku telishu but naku matram nuvvu natho vunte chala happy ga vuntahi chala confident ga vundanu dhenilo ayina nenu chese prathi work lo nuvvu support chesthavu.. cheppalii ante na ippativaraku na behaviour gurinchi evariki ayina cheppali ante 2ways ga chepthanu 1. nuvvu paricham avvaka mundhu and 2. nuvvu parichayam ayyina tharuvatha. naku ippudu thelusthundhi nenu chala change ayyanu, not bad. nitho nenu chala thakkuva time lone close ayyanu and alane thakkuva time ne nitho best friend ga kuda vunna... nenu instagram lo eppudu friends godavalu chusina naku nuvvu gurthuvasthavu, chala happy ga feel avuthanu manam kuda ala godavalu adukunevalamu ani. naku ma annaya ni valla frd ni chusinappudu kuda nuvvu gurthuvasthavu vallu idharu kuda chala baguntaru close ga thittukuntu, kottukuntu saradhaga. So nenu future lo Btech life eppudu gurthuku vachina naku 1st gurthuku vachedhi nuvvu 100%. inka chala vunnayi nitho happy ga anipinchevi enjoy chesinavi..
+                Ela vunnavu Reshama..? 
+                Na life lo nijam ga nuvvu chala important person. naku chala nerpinchavu. evaritho ela vundalo cheppavu chala cheppavu ila. nenu chala nerchukunnanu. and nenu nitho close ayyinantha ekkuvaga evaritho avvaledhu ippatiki kuda, You are my forever best friend. manam matladukunna matladukokapoyina naku nuvvu eppudu best friend ga vuntavu. nuvvu natho vunte niku ela vuntadho naku telidhu but naku matram nuvvu natho vunte chala happy ga vuntahi chala confident ga vuntanu dhenilo ayina nenu chese prathi work lo nuvvu support chesthavu.. cheppalii ante na ippativaraku na behaviour gurinchi evariki ayina cheppali ante 2ways ga chepthanu 1. nuvvu paricham avvaka mundhu and 2. nuvvu parichayam ayyina tharuvatha. naku ippudu thelusthundhi nenu chala change ayyanu, not bad. nitho nenu chala thakkuva time lone close ayyanu and alane thakkuva time ne nitho best friend ga kuda vunna... nenu instagram lo eppudu friends godavalu chusina naku nuvvu gurthuvasthavu, chala happy ga feel avuthanu manam kuda ala godavalu adukunevalamu ani. naku ma annaya ni valla frd ni chusinappudu kuda nuvvu gurthuvasthavu vallu idharu kuda chala baguntaru close ga thittukuntu, kottukuntu saradhaga. So nenu future lo Btech life eppudu gurthuku vachina naku 1st gurthuku vachedhi nuvvu 100%. inka chala vunnayi nitho happy ga anipinchevi enjoy chesinavi..
               </p>
             </div>
 
             <div className="conversation-line line-3 reveal">
               <p>
-                I'm genuinely happy that I met you and that you became such an important part
-                of my life.
+               Naku malli past gurinchi thevali ani ledhu. but nenu chala bad ga behave chesanu naku thelusthundhi. but nenu appudu ala kavali ani cheyyaledhu only nuvvu naku ekkada dhooram ayyipothavu anna bayam thone ala chesanu reshama anthaku minchi em ledhu. chivariki bayapadinatte dhooram ayyipoyavu. nenu gurthukuvasthunnana reshama niku okkasari ayina inni days lo. nenu chala times try chesanu nitho malli just frd ga ayina vundhamu ani but niku ala kuda nachadam ledu natho vundadam. anthe adhi ni istam nenu force cheyyadam ledhu. nenu eppudu aigina ippudu ila bagane vuntunnamu kadha antavu, nuvvu ela vunnavo naku thelidhu rehsma but naku matram ila assala nachadam ledhu assala bagoledhu.ala ani ippudu matladamanadam ledhu. nenu ni life lo vunte nuvvu mundhuku vellalevu nenu ninnu chala distrub chesthanu. so nenu inka fix ayyanu ninnu eppatiki distrub cheyyakudadhu ani. naku endhuko okati anipisthundhi nuvvvu settle ayyaka malli manam kalusthamu amo ani. I’m waiting for that day.. nilo vunna past reshama chudali ani vundhi, but vadhule vunna malli na valla chala suffer avuthavu adhi naku istam ledhu. 
               </p>
+            </div>
+               <div className="conversation-line line-3 reveal">
+                <p>
+                  And Last, nakosam intha time spend chesinandhuku tq so much. always be happy. and this messages is  my last messages. malli ni next bdays ki kaludham. byee....
+                </p>
+            </div>
+            <div className="conversation-line line-3 reveal">
+                <p>
+                    Congratulations Reshamaaa... Cognizant lo job vachinanduku! <br/>
+
+                    I feel really proud and happy. Antha dooram nunchi vasthunna, job raakapothe baagodu ani feel ayyedhanivi kadhaa... chivariki job kottavu. Super! <br/>
+
+                    Once again, congratulations Reshaamaa! 🎉
+                </p>
             </div>
           </div>
 
@@ -366,7 +406,7 @@ function App() {
         <div className="ambient-glow"></div>
 
         <div className="scene reveal scene-reveal">
-          <img src="/birthday-scene.png" alt="Birthday scene" className="scene-image" />
+          <img src="/bachground.png" alt="Birthday scene" className="scene-image" />
         </div>
 
         <div className="hero-text reveal">
@@ -475,7 +515,7 @@ function App() {
         </div>
       </section>
 
-      <section id="surprise" className="section surprise-section">
+      <section id="wish" className="section surprise-section">
         <div className="surprise-content reveal">
           <p className="eyebrow">AND FINALLY...</p>
 
@@ -492,7 +532,6 @@ function App() {
             lives of the people around you.
           </p>
 
-          <div className="cake-icon">🎂</div>
         </div>
       </section>
 
